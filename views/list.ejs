@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Banking Project</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Molengo&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<div class="nik">
+  <h1><u>Online Banking</u></h1>
+  <hr>
+</div>
+  <table>
+    <thead>
+      <tr>
+        <th><u>USER ID</u></th>
+        <th><u>USER NAME</u></th>
+        <th><u>USER EMAIL</u></th>
+        <th><u>BALANCE</u></th>
+        <th><u>ACTION</u></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%items.forEach(function(item){ %>
+      <tr>
+        <td><%=item.id%></td>
+        <td><%=item.name%></td>
+        <td><%=item.email%></td>
+        <td><%=item.balance%></td>
+        <td><form class="but" action="/customer" method="post">
+          <input class="button" type="submit" name="submitB" value="TRANSFER">
+        </form></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <!-- <form class="but" action="/customer" method="post">
+    <input class="button" type="submit" name="submitB" value="TRANSFER">
+  </form> -->
+</body>
+
+</html>
